@@ -182,15 +182,54 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 | Privilege Escalation | Create or Modify System Process | T1543 | ✅ Confirmed |
 | Privilege Escalation | Valid Accounts | T1078 | ✅ Confirmed |
 | Privilege Escalation | Boot or Logon Initialization Scripts | T1037 | ✅ Confirmed |
-| Stealth | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
-| Defense Impairment | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
+| Stealth | Pre-OS Boot | T1542 | ✅ Confirmed |
+| Stealth | Process Injection | T1055 | ✅ Confirmed |
+| Stealth | Signed Binary Proxy Execution | T1218 | ✅ Confirmed |
+| Stealth | Obfuscated Files or Information | T1027 | ✅ Confirmed |
+| Stealth | Rootkit | T1014 | ✅ Confirmed |
+| Stealth | Impersonation | T1656 | ✅ Confirmed |
+| Stealth | BITS Jobs | T1197 | ✅ Confirmed |
+| Stealth | Access Token Manipulation | T1134 | ✅ Confirmed |
+| Stealth | Social Engineering | T1684 | ✅ Confirmed |
+| Stealth | Deobfuscate/Decode Files or Information | T1140 | ✅ Confirmed |
+| Stealth | Indicator Removal | T1218.010 | ✅ Confirmed |
+| Stealth | Hijack Execution Flow | T1574 | ✅ Confirmed |
+| Stealth | Masquerading | T1036 | ✅ Confirmed |
+| Stealth | Execution Guardrails | T1480 | ✅ Confirmed |
+| Stealth | Impair Defenses | T1562 | ✅ Confirmed |
+| Stealth | Valid Accounts | T1078 | ✅ Confirmed |
+| Defense Impairment | Modify Registry | T1112 | ✅ Confirmed |
+| Defense Impairment | Disable or Modify Tools | T1685 | ✅ Confirmed |
+| Defense Impairment | Domain or Tenant Policy Modification | T1484 | ✅ Confirmed |
+| Defense Impairment | Subvert Trust Controls | T1553 | ✅ Confirmed |
+| Defense Impairment | Network Boundary Bridging | T1599 | ✅ Confirmed |
 | Credential Access | Brute Force | T1110 | ✅ Confirmed |
-| Lateral Movement | Remote Services — RDP | T1021.001 | ✅ Confirmed |
-| Lateral Movement | SMB / Windows Admin Shares | T1021.002 | ✅ Confirmed |
-| Collection | Data Staged — Local | T1074.001 | ✅ Confirmed |
-| Collection | Archive via Custom Utility | T1560.001 | ✅ Confirmed |
-| Exfiltration | Exfiltration Over HTTPS | T1048.002 | ✅ Confirmed |
-| Command & Control | Encrypted Channel | T1573.001 | ✅ Confirmed |
+| Credential Access | Input Capture | T1056 | ✅ Confirmed |
+| Credential Access | Credentials from Password Stores | T1555 | ✅ Confirmed |
+| Credential Access | OS Credential Dumping | T1003 | ✅ Confirmed |
+| Lateral Movement | Use Alternate Authentication Material | T1550 | ✅ Confirmed |
+| Lateral Movement | Remote Services | T1021 | ✅ Confirmed |
+| Lateral Movement | Remote Service Session Hijacking | T1563 | ✅ Confirmed |
+| Lateral Movement | Lateral Tool Transfer | T1570 | ✅ Confirmed |
+| Collection | Automated Collection | T1119 | ✅ Confirmed |
+| Collection | Data from Local System | T1005 | ✅ Confirmed |
+| Collection | Data Staged | T1074 | ✅ Confirmed |
+| Collection | Input Capture | T1056 | ✅ Confirmed |
+| Collection | Archive Collected Data | T1560 | ✅ Confirmed |
+| Collection | Data from Information Repositories | T1213 | ✅ Confirmed |
+| Exfiltration | Exfiltration Over Alternative Protocol | T1048 | ✅ Confirmed |
+| Exfiltration | Exfiltration Over C2 Channel | T1041 | ✅ Confirmed |
+| Exfiltration | Data Transfer Size Limits | T1030 | ✅ Confirmed |
+| Exfiltration | Exfiltration Over Web Service | T1567 | ✅ Confirmed |
+| Command & Control | Web Service | T1102 | ✅ Confirmed |
+| Command & Control | Ingress Tool Transfer | T1105 | ✅ Confirmed |
+| Command & Control | Dynamic Resolution | T1568 | ✅ Confirmed |
+| Command & Control | Multi-Stage Channels | T1104 | ✅ Confirmed |
+| Command & Control | Encrypted Channel | T1573 | ✅ Confirmed |
+| Command & Control | Data Obfuscation | T1001 | ✅ Confirmed |
+| Command & Control | Proxy | T1090 | ✅ Confirmed |
+| Command & Control | Application Layer Protocol | T1071 | ✅ Confirmed |
+| Command & Control | Fallback Channels | T1008 | ✅ Confirmed |
 | Impact | Financial Theft | T1657 | ✅ Confirmed |
 | Impact | Resource Hijacking | T1496 | ✅ Confirmed |
 | Impact | Data Encrypted for Impact | T1486 | ✅ Confirmed |
