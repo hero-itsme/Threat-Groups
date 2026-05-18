@@ -86,6 +86,7 @@ This report synthesises open-source intelligence, incident response findings, an
 ### Target Countries
 
 United States, UK, Australia, United Arab Emirates, Bangladesh, South Korea, Taiwan, Canada, Switzerland, China, Cyprus, Germany, Egypt, Finland, Haiti, Indonesia, India, Iran, Japan, Kenya, Sweden, Thailand, Turkey, Taiwan, South Africa
+
 ---
 
 ## Attack Chain Analysis
