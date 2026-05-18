@@ -3,32 +3,86 @@ MASTER INDICATORS OF COMPROMISE (IOC) DATASET
 ========================================================================
 
 --- 1. FILE HASHES (MD5 / SHA-256) ---
-[Copy and paste your file hashes directly below this line]
 2f1a6b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a
 a1b2c3d4e5f67890badc0ffee1234567890abcdef1234567890abcdef1234567
 7b9d8e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d
 
 --- 2. DOMAINS ---
-[Copy and paste your domains and URLs directly below this line]
 malicious-updater-service.com
 secure-login-portal-update.org
 http://192.0.2.1/payload/dropper.exe
 https://malicious-domain.com/wp-content/themes/bridge/c2.php
 
 --- 3. COMMAND & CONTROL (C2) IP ADDRESSES ---
-[Copy and paste your IP addresses directly below this line]
-192.0.2.1
-198.51.100.45
-203.0.113.110
+107.182.24.70
+180.150.226.216
+104.243.19.49
+173.209.62.186
+172.86.75.54
+149.28.150.195
+149.28.84.98
+202.79.173.211
+218.255.77.60
+106.52.174.66
+207.246.108.247
+103.19.3.43
+61.172.253.36
+116.204.211.59
+103.87.10.100
+154.212.129.218
+199.19.110.240
+172.193.44.8
+45.61.136.199
+218.255.77.52
+23.225.199.162
+95.111.245.74
+39.106.32.186
+112.121.178.90
+45.86.163.136
+223.255.155.235
+104.36.69.105
+43.240.127.171
+119.8.100.209
+172.200.21.83
+154.202.198.246
+194.145.227.21
+137.220.178.43
+103.243.181.105
+139.162.123.108
+223.255.155.243
+104.243.23.73
+45.61.136.2
+108.61.214.194
+216.24.180.216
+198.13.40.130
+45.32.93.169
+176.122.162.149
+45.33.100.13
+172.105.18.72
+194.68.44.19
+139.59.116.0
 
 --- 4. TARGETED VULNERABILITIES (CVEs) ---
-[Copy and paste your CVE identifiers directly below this line]
-CVE-2024-21887
-CVE-2023-46805
-CVE-2024-1709
+CVE-2021-26858
+CVE-2021-26857
+CVE-2021-44207
+CVE-2019-1652
+CVE-2017-11151
+CVE-2019-16278
+CVE-2019-19781
+CVE-2020-0688
+CVE-2021-27065
+CVE-2021-26855
+CVE-2019-8561
+CVE-2019-16920
+CVE-2019-16098
+CVE-2019-11510
+CVE-2021-44228
+CVE-2020-10189
+CVE-2017-0199
+CVE-2019-1653
 
 --- 5. DOMAINS & CALL-OUT URLS ---
-[Copy and paste your domains and URLs directly below this line]
 https://mute-pond-371d.zalocdn.workers.dev/Accept-Encoding:
 http://107.181.187.184/4242
 http://107.181.187.184:389/TomcatBypass/Command/Base64/dW5zZXQgSElTVE
