@@ -20,9 +20,6 @@ This documentation serves as an operational guide for threat hunters, detection 
 ```text
 ├── README.md                  # This documentation file
 ├── threat_report_apt41.md     # Full comprehensive Threat Actor Report
-├── mitre/
-│   └── navigator-layer.json   # ATT&CK Navigator layer for SIEM/EDR mapping
 ├── iocs/
 │   └── iocs.txt               # Consolidated master list of defanged IOCs (IPs, Domains, Hashes)
-└── yara/
-    └── apt41_custom.yar       # YARA rules targeting CROSSWALK, DUSTPAN, and SPECULOOS
+
