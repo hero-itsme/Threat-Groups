@@ -246,12 +246,12 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 
 ### IP Addresses
 
-| IP (defanged) | Context | First Seen | Confidence |
-|---|---|---|---|
-| `185.220.101[.]47` | C2 relay — EU node | 2025-11-14 | HIGH |
-| `194.165.16[.]77` | C2 infrastructure | 2025-12-02 | HIGH |
-| `45.142.212[.]93` | Scanning / recon node | 2026-01-08 | MEDIUM |
-| `103.76.228[.]112` | Exfiltration endpoint | 2026-02-17 | HIGH |
+| IP (defanged) | 
+|---|
+| `185.220.101[.]47` |
+| `194.165.16[.]77` | 
+| `45.142.212[.]93` |
+| `103.76.228[.]112` | 
 ### Domains
  
 | Domain (defanged) | Context | First Seen | Confidence |
