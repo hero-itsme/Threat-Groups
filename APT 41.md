@@ -254,19 +254,19 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 | `103.76.228[.]112` | 
 ### Domains
  
-| Domain (defanged) | Context | First Seen | Confidence |
-|---|---|---|---|
-| `update-svc.microsft-cdn[.]net` | C2 — typosquats Microsoft | 2025-11-29 | HIGH |
-| `telemetry.azr-metrics[.]com` | C2 — impersonates Azure | 2026-01-15 | MEDIUM |
-| `cdn-delivery.office365-update[.]net` | Phishing / C2 | 2026-02-03 | MEDIUM |
+| Domain (defanged) | 
+|---|
+| `update-svc.microsft-cdn[.]net` |
+| `telemetry.azr-metrics[.]com` | 
+| `cdn-delivery.office365-update[.]net` | 
  
 ### File Hashes (SHA-256)
  
-| Hash | Malware Family | Description | Confidence |
-|---|---|---|---|
-| `3a7f2c9b1d5e8f4a...` | CROSSWALK | Primary backdoor loader | HIGH |
-| `9c1d4e7b2f8a3c6e...` | DUSTPAN | In-memory dropper | HIGH |
-| `5c8d1e3f9b2a7c4e...` | MESSAGETAP | SMS interception tool | MEDIUM |
+| Hash | 
+|---|
+| `3a7f2c9b1d5e8f4a...` |
+| `9c1d4e7b2f8a3c6e...` | 
+| `5c8d1e3f9b2a7c4e...` | 
 
 ---
 
@@ -274,15 +274,15 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 
 APT-41 maintains one of the largest and most diverse custom malware portfolios of any tracked threat actor. Key tools include:
 
-| Tool | Type | Description |
-|---|---|---|
-| **CROSSWALK** | Backdoor | Primary C2 implant; modular, supports plugin loading |
-| **DUSTPAN** | Dropper | In-memory only; loads CROSSWALK without on-disk artifacts |
-| **MESSAGETAP** | Intercept tool | Deployed on telecom SMS gateways to intercept messages |
-| **SPECULOOS** | Backdoor | Linux-targeting; deployed against BSD systems |
-| **HIGHNOON** | Backdoor | Dropper + launcher combo targeting software vendors |
-| **DEADEYE** | Dropper | Used in supply chain operations |
-| **LOWKEY** | Passive backdoor | Listen-only; activated by specific network packet trigger |
+| Tool | Type |
+|---|---|
+| **CROSSWALK** | Backdoor | 
+| **DUSTPAN** | Dropper |
+| **MESSAGETAP** | Intercept tool | 
+| **SPECULOOS** | Backdoor | 
+| **HIGHNOON** | Backdoor | 
+| **DEADEYE** | Dropper |
+| **LOWKEY** | Passive backdoor | 
  
 
 ---
