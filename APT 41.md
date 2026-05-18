@@ -1,12 +1,12 @@
 # 🔴 Threat Actor Report: APT-41 (DOUBLE DRAGON)
 
-![TLP](https://img.shields.io/badge/TLP-AMBER-orange?style=flat-square)
+
 ![Status](https://img.shields.io/badge/Campaign-Active-red?style=flat-square)
 ![Confidence](https://img.shields.io/badge/Confidence-High%2084%25-blue?style=flat-square)
 ![Last Updated](https://img.shields.io/badge/Updated-April%202026-lightgrey?style=flat-square)
 ![MITRE](https://img.shields.io/badge/MITRE%20ATT%26CK-Mapped-purple?style=flat-square)
 
-> **TLP:AMBER** — Restrict to named recipients and their organizations only. Do not post publicly without stripping IOCs.
+
 
 ---
 ## 📋 Table of Contents
@@ -73,7 +73,7 @@ This report synthesises open-source intelligence, incident response findings, an
 ### Sectors (confirmed targeting)
 
 | Sector | Motivation |
-|---|---|---|
+|---|---|
 | Healthcare / Pharma | Espionage — COVID-19 research theft |
 | Technology / Software | Espionage + Supply chain |
 | Telecommunications | Espionage — SIGINT support | 
