@@ -44,27 +44,7 @@ This report synthesises open-source intelligence, incident response findings, an
 | Field | Detail |
 |---|---|
 | **Designation** | APT-41 |
-| **Also known as** | APT41
-Amoeba
-BARIUM
-BRONZE ATLAS
-BRONZE EXPORT
-Blackfly
-Brass Typhoon
-Double Dragon
-Earth Baku
-G0044
-G0096
-Grayfly
-HOODOO
-LEAD
-Leopard Typhoon
-Red Kelpie
-TA415
-TG-2633
-WICKED PANDA
-WICKED SPIDER
-Winnti |
+| **Also known as** | APT41, Amoeba, BARIUM, BRONZE, ATLAS, BRONZE, EXPORT, Blackfly, Brass Typhoon, Double Dragon, Earth Baku, G0044, G0096, Grayfly, LEAD, Leopard Typhoon, Red Kelpie, TA415, TG-2633, WICKED PANDA, WICKED SPIDER, Winnti |
 | **Suspected origin** | People's Republic of China |
 | **Sponsoring entity** | Assessed: MSS (Ministry of State Security) — Chengdu branch |
 | **Motivation** | Dual: State espionage + financial gain |
