@@ -202,7 +202,7 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 ### Technical Indicators
 The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, and IPs can be found in our single master file:
 
-* **Master Dataset:** [`/iocs/iocs.txt`](./iocs/iocs.txt)
+* **Master Dataset:** [`/iocs/iocs.txt`](https://github.com/hero-itsme/Threat-Groups/blob/main/iocs(APT41).txt)
 
 ### IP Addresses
 
