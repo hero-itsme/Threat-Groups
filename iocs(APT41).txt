@@ -63,6 +63,7 @@ https://malicious-domain.com/wp-content/themes/bridge/c2.php
 139.59.116.0
 
 --- 4. TARGETED VULNERABILITIES (CVEs) ---
+
 CVE-2021-26858
 CVE-2021-26857
 CVE-2021-44207
@@ -83,6 +84,7 @@ CVE-2017-0199
 CVE-2019-1653
 
 --- 5. DOMAINS & CALL-OUT URLS ---
+
 https://mute-pond-371d.zalocdn.workers.dev/Accept-Encoding:
 http://107.181.187.184/4242
 http://107.181.187.184:389/TomcatBypass/Command/Base64/dW5zZXQgSElTVE
