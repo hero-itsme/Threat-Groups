@@ -235,15 +235,16 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 
 APT-41 maintains one of the largest and most diverse custom malware portfolios of any tracked threat actor. Key tools include:
 
-| Tool | Type |
+| Tool | Type | Description |
 |---|---|---|
-| **CROSSWALK** | Backdoor | 
-| **DUSTPAN** | Dropper | 
-| **MESSAGETAP** | Intercept tool | 
-| **SPECULOOS** | Backdoor |
-| **HIGHNOON** | Backdoor | 
-| **DEADEYE** | Dropper | 
-| **LOWKEY** | Passive backdoor | 
+| **CROSSWALK** | Backdoor | Primary C2 implant; modular, supports plugin loading |
+| **DUSTPAN** | Dropper | In-memory only; loads CROSSWALK without on-disk artifacts |
+| **MESSAGETAP** | Intercept tool | Deployed on telecom SMS gateways to intercept messages |
+| **SPECULOOS** | Backdoor | Linux-targeting; deployed against BSD systems |
+| **HIGHNOON** | Backdoor | Dropper + launcher combo targeting software vendors |
+| **DEADEYE** | Dropper | Used in supply chain operations |
+| **LOWKEY** | Passive backdoor | Listen-only; activated by specific network packet trigger |
+ 
 
 ---
 
