@@ -47,8 +47,9 @@ This report synthesises open-source intelligence, incident response findings, an
 | **Also known as** | APT41, Amoeba, BARIUM, BRONZE, ATLAS, BRONZE, EXPORT, Blackfly, Brass Typhoon, Double Dragon, Earth Baku, G0044, G0096, Grayfly, LEAD, Leopard Typhoon, Red Kelpie, TA415, TG-2633, WICKED PANDA, WICKED SPIDER, Winnti |
 | **Suspected origin** | People's Republic of China |
 | **Sponsoring entity** | Assessed: MSS (Ministry of State Security) — Chengdu branch |
-| **Motivation** | Dual: State espionage + financial gain |
-| **Active since** | 2012 (estimated) |
+| **Motivation** | Information theft and espionage, Financial gain, Financial crime |
+| **First Seen** | 2012-01-01 |
+| **Last Seen** | 2026-05-18 |
 | **Capability tier** | Tier 1 — Nation-State Advanced |
 | **Known members indicted** | 5 (U.S. DoJ indictment, September 2020) |
 | **Attribution confidence** | **HIGH — 84%** |
