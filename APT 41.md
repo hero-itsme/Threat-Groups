@@ -9,7 +9,6 @@
 > **TLP:AMBER** — Restrict to named recipients and their organizations only. Do not post publicly without stripping IOCs.
 
 ---
-
 ## 📋 Table of Contents
 
 - [Executive Summary](#executive-summary)
@@ -136,20 +135,59 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 
 | Tactic | Technique | ID | Confidence |
 |---|---|---|---|
+| Reconnaissance | Search Victim-Owned Websites | T1594 | ✅ Confirmed |
+| Reconnaissance | Search Open Websites/Domains | T1593 | ✅ Confirmed |
 | Reconnaissance | Active Scanning | T1595 | ✅ Confirmed |
-| Reconnaissance | Gather Victim Identity Info | T1589 | ✅ Confirmed |
+| Reconnaissance | Search Open Technical Databases | T1596 | ✅ Confirmed |
+| Resource Development | Acquire Infrastructure | T1583 | ✅ Confirmed |
+| Resource Development | Obtain Capabilities | T1588 | ✅ Confirmed |
 | Resource Development | Compromise Infrastructure | T1584 | ✅ Confirmed |
+| Resource Development | Compromise Accounts | T1586 | ✅ Confirmed |
+| Initial Access | External Remote Services | T1133 | ✅ Confirmed |
+| Initial Access | Phishing | T1566 | ✅ Confirmed |
+| Initial Access | Drive-by Compromise | T1189 | ✅ Confirmed |
 | Initial Access | Supply Chain Compromise | T1195.002 | ✅ Confirmed |
 | Initial Access | Exploit Public-Facing Application | T1190 | ✅ Confirmed |
-| Initial Access | Spear-phishing Attachment | T1566.001 | ✅ Confirmed |
-| Execution | PowerShell | T1059.001 | ✅ Confirmed |
+| Initial Access | Valid Accounts | T1078 | ✅ Confirmed |
+| Execution | System Services | T1569 | ✅ Confirmed |
+| Execution | Exploitation for Client Execution | T1203 | ✅ Confirmed |
+| Execution | Native API | T1106 | ✅ Confirmed |
+| Execution | Scheduled Task/Job | T1053 | ✅ Confirmed |
+| Execution | BITS Jobs | T1197 | ✅ Confirmed |
+| Execution | Hijack Execution Flow | T1574 | ✅ Confirmed |
 | Execution | Windows Management Instrumentation | T1047 | ✅ Confirmed |
-| Persistence | Create/Modify System Process | T1543.003 | ✅ Confirmed |
-| Persistence | Scheduled Task | T1053.005 | ✅ Confirmed |
-| Privilege Escalation | OS Credential Dumping — LSASS | T1003.001 | ✅ Confirmed |
-| Privilege Escalation | Kerberoasting | T1558.003 | ✅ Confirmed |
-| Defense Evasion | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
-| Defense Evasion | Indicator Removal — Clear Logs | T1070.001 | ✅ Confirmed |
+| Execution | PowerShell | T1059.001 | ✅ Confirmed |
+| Execution | User Execution | T1204 | ✅ Confirmed |
+
+| Persistence | Event Triggered Execution | T1546 | ✅ Confirmed |
+| Persistence | Modify Registry | T1112 | ✅ Confirmed |
+| Persistence | Pre-OS Boot | T1542 | ✅ Confirmed |
+| Persistence | External Remote Services | T1133 | ✅ Confirmed |
+| Persistence | Scheduled Task/Job | T1053 | ✅ Confirmed |
+| Persistence | BITS Jobs | T1197 | ✅ Confirmed |
+| Persistence | Account Manipulation | T1098 | ✅ Confirmed |
+| Persistence | Server Software Component | T1505 | ✅ Confirmed |
+| Persistence | Boot or Logon Autostart Execution | T1547 | ✅ Confirmed |
+| Persistence | Create Account | T1136 | ✅ Confirmed |
+| Persistence | Create/Modify System Process | T1543 | ✅ Confirmed |
+| Persistence | Valid Accounts | T1078 | ✅ Confirmed |
+| Persistence | Boot or Logon Initialization Scripts | T1037 | ✅ Confirmed |
+| Privilege Escalation | Event Triggered Execution | T1546 | ✅ Confirmed |
+| Privilege Escalation | Process Injection | T1055 | ✅ Confirmed |
+| Privilege Escalation | Scheduled Task/Job | T1053 | ✅ Confirmed |
+| Privilege Escalation | Domain or Tenant Policy Modification | T1484 | ✅ Confirmed |
+| Privilege Escalation | Access Token Manipulation | T1134 | ✅ Confirmed |
+| Privilege Escalation | Account Manipulation | T1098 | ✅ Confirmed |
+| Privilege Escalation | Boot or Logon Autostart Execution | T1547 | ✅ Confirmed |
+| Privilege Escalation | Create or Modify System Process | T1543 | ✅ Confirmed |
+| Privilege Escalation | Valid Accounts | T1078 | ✅ Confirmed |
+| Privilege Escalation | Boot or Logon Initialization Scripts | T1037 | ✅ Confirmed |
+
+| Stealth | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
+
+| Defense Impairment | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
+
+
 | Credential Access | Brute Force | T1110 | ✅ Confirmed |
 | Lateral Movement | Remote Services — RDP | T1021.001 | ✅ Confirmed |
 | Lateral Movement | SMB / Windows Admin Shares | T1021.002 | ✅ Confirmed |
@@ -158,7 +196,8 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 | Exfiltration | Exfiltration Over HTTPS | T1048.002 | ✅ Confirmed |
 | Command & Control | Encrypted Channel | T1573.001 | ✅ Confirmed |
 | Impact | Financial Theft | T1657 | ✅ Confirmed |
-
+| Impact | Resource Hijacking | T1496 | ✅ Confirmed |
+| Impact | Data Encrypted for Impact | T1486 | ✅ Confirmed |
 ---
 
 ## Indicators of Compromise
@@ -289,11 +328,12 @@ The following gaps limit the completeness of this assessment. Community contribu
 ## References & Sources
 
 1. [Mandiant: APT41 — A Dual Espionage and Cyber Crime Operation](https://www.mandiant.com/resources/apt41-dual-espionage-and-cyber-crime-operation)
-2. [CrowdStrike: WICKED PANDA Threat Actor Profile](https://www.crowdstrike.com)
-3. [U.S. DoJ Indictment — APT41 Members (September 2020)](https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer-intrusion)
-4. [CISA Advisory AA21-201A — Chinese State-Sponsored Cyber Operations](https://www.cisa.gov/uscert/ncas/alerts/aa21-201a)
-5. [MITRE ATT&CK — APT41 Group Page](https://attack.mitre.org/groups/G0096/)
-6. [Microsoft MSTIC: HAFNIUM / BRONZE ATLAS Tracking](https://www.microsoft.com/security/blog)
+2. [Advance Persistent Threats](https://cloud.google.com/security/resources/insights/apt-groups)
+3. [CrowdStrike: WICKED PANDA Threat Actor Profile](https://www.crowdstrike.com)
+4. [U.S. DoJ Indictment — APT41 Members (September 2020)](https://www.justice.gov/opa/pr/seven-international-cyber-defendants-including-apt41-actors-charged-connection-computer-intrusion)
+5. [CISA Advisory AA21-201A — Chinese State-Sponsored Cyber Operations](https://www.cisa.gov/uscert/ncas/alerts/aa21-201a)
+6. [MITRE ATT&CK — APT41 Group Page](https://attack.mitre.org/groups/G0096/)
+7. [Microsoft MSTIC: HAFNIUM / BRONZE ATLAS Tracking](https://www.microsoft.com/security/blog)
 
 ---
 
@@ -301,28 +341,8 @@ The following gaps limit the completeness of this assessment. Community contribu
 
 | Version | Date | Author | Changes |
 |---|---|---|---|
-| v1.0 | 2026-04-22 | @your-username | Initial publication |
+| v1.0 | 2026-05-18 | @hero-itsme | Initial publication |
 | v1.1 | — | — | — |
 
----
 
-## Contributing
 
-Found an error, have new IOCs, or want to add context? Open an [Issue](../../issues) or submit a [Pull Request](../../pulls).
-
-Please ensure all submitted IOCs are:
-- Defanged (use `[.]` notation)
-- Accompanied by a source reference or evidence basis
-- Assessed with a confidence level (HIGH / MEDIUM / LOW)
-
----
-
-## License
-
-This report is released under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE).
-
-You are free to share and adapt this material for any purpose, provided appropriate credit is given.
-
----
-
-*Produced by: [Your Name / Team] | Contact: your@email.com | Report ID: CTI-APT41-2026-001*
