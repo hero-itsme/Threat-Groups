@@ -158,7 +158,6 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 | Execution | Windows Management Instrumentation | T1047 | ✅ Confirmed |
 | Execution | PowerShell | T1059.001 | ✅ Confirmed |
 | Execution | User Execution | T1204 | ✅ Confirmed |
-
 | Persistence | Event Triggered Execution | T1546 | ✅ Confirmed |
 | Persistence | Modify Registry | T1112 | ✅ Confirmed |
 | Persistence | Pre-OS Boot | T1542 | ✅ Confirmed |
@@ -182,12 +181,8 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 | Privilege Escalation | Create or Modify System Process | T1543 | ✅ Confirmed |
 | Privilege Escalation | Valid Accounts | T1078 | ✅ Confirmed |
 | Privilege Escalation | Boot or Logon Initialization Scripts | T1037 | ✅ Confirmed |
-
 | Stealth | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
-
 | Defense Impairment | Signed Binary Proxy Execution | T1218.010 | ✅ Confirmed |
-
-
 | Credential Access | Brute Force | T1110 | ✅ Confirmed |
 | Lateral Movement | Remote Services — RDP | T1021.001 | ✅ Confirmed |
 | Lateral Movement | SMB / Windows Admin Shares | T1021.002 | ✅ Confirmed |
@@ -204,7 +199,10 @@ APT-41 follows a disciplined multi-phase intrusion lifecycle. The sequence below
 
 > ⚠️ **All IOCs are defanged.** Replace `[.]` with `.` before using in detection tools. Do not click or access any listed URLs directly.
 
-Full machine-readable IOC list: [`/iocs/iocs.csv`](./iocs/iocs.csv) | [`/iocs/iocs.json`](./iocs/iocs.json)
+### Technical Indicators
+The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, and IPs can be found in our single master file:
+
+* **Master Dataset:** [`/iocs/iocs.txt`](./iocs/iocs.txt)
 
 ### IP Addresses
 
