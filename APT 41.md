@@ -214,20 +214,20 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 | `45.142.212[.]93` | Scanning / recon node | 2026-01-08 | MEDIUM |
 | `103.76.228[.]112` | Exfiltration endpoint | 2026-02-17 | HIGH |
 ### Domains
-
-| Domain (defanged) | 
+ 
+| Domain (defanged) | Context | First Seen | Confidence |
 |---|---|---|---|
-| `update-svc.microsft-cdn[.]net` | 
-| `telemetry.azr-metrics[.]com` | 
-| `cdn-delivery.office365-update[.]net` |
-
+| `update-svc.microsft-cdn[.]net` | C2 — typosquats Microsoft | 2025-11-29 | HIGH |
+| `telemetry.azr-metrics[.]com` | C2 — impersonates Azure | 2026-01-15 | MEDIUM |
+| `cdn-delivery.office365-update[.]net` | Phishing / C2 | 2026-02-03 | MEDIUM |
+ 
 ### File Hashes (SHA-256)
-
-| Hash | 
+ 
+| Hash | Malware Family | Description | Confidence |
 |---|---|---|---|
-| `3a7f2c9b1d5e8f4a...` |
-| `9c1d4e7b2f8a3c6e...` | 
-| `5c8d1e3f9b2a7c4e...` | 
+| `3a7f2c9b1d5e8f4a...` | CROSSWALK | Primary backdoor loader | HIGH |
+| `9c1d4e7b2f8a3c6e...` | DUSTPAN | In-memory dropper | HIGH |
+| `5c8d1e3f9b2a7c4e...` | MESSAGETAP | SMS interception tool | MEDIUM |
 
 ---
 
