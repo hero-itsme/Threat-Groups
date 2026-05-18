@@ -19,7 +19,6 @@
 - [MITRE ATT&CK Mapping](#mitre-attck-mapping)
 - [Indicators of Compromise](#indicators-of-compromise)
 - [Malware & Tooling](#malware--tooling)
-- [Infrastructure Patterns](#infrastructure-patterns)
 - [Analyst Assessment](#analyst-assessment)
 - [Defensive Recommendations](#defensive-recommendations)
 - [Intelligence Gaps](#intelligence-gaps)
@@ -73,15 +72,15 @@ This report synthesises open-source intelligence, incident response findings, an
 
 ### Sectors (confirmed targeting)
 
-| Sector | Motivation | Observed Impact |
+| Sector | Motivation |
 |---|---|---|
-| Healthcare / Pharma | Espionage — COVID-19 research theft | IP theft, PII exfiltration |
-| Technology / Software | Espionage + Supply chain | Source code theft, trojanised updates |
-| Telecommunications | Espionage — SIGINT support | Call record access, subscriber data |
-| Gaming / Online gaming | Financial — virtual currency fraud | Revenue theft, credential harvesting |
-| Defence / Aerospace | Espionage | Military R&D, contractor data |
-| Government / Education | Espionage | Policy research, academic IP |
-| Financial services | Financial | Wire fraud, data theft |
+| Healthcare / Pharma | Espionage — COVID-19 research theft |
+| Technology / Software | Espionage + Supply chain |
+| Telecommunications | Espionage — SIGINT support | 
+| Gaming / Online gaming | Financial — virtual currency fraud | 
+| Defence / Aerospace | Espionage | 
+| Government / Education | Espionage | 
+| Financial services | Financial |
 
 ### Target Countries
 
@@ -208,35 +207,28 @@ The complete, consolidated dataset of all tracked domains, hashes, URLs, CVEs, a
 
 ### IP Addresses
 
-| IP (defanged) | Context | First Seen | Confidence |
+| IP (defanged) |
 |---|---|---|---|
-| `185.220.101[.]47` | C2 relay — EU node | 2025-11-14 | HIGH |
-| `194.165.16[.]77` | C2 infrastructure | 2025-12-02 | HIGH |
-| `45.142.212[.]93` | Scanning / recon node | 2026-01-08 | MEDIUM |
-| `103.76.228[.]112` | Exfiltration endpoint | 2026-02-17 | HIGH |
+| `185.220.101[.]47` | 
+| `194.165.16[.]77` | 
+| `45.142.212[.]93` | 
+| `103.76.228[.]112` | 
 
 ### Domains
 
-| Domain (defanged) | Context | First Seen | Confidence |
+| Domain (defanged) | 
 |---|---|---|---|
-| `update-svc.microsft-cdn[.]net` | C2 — typosquats Microsoft | 2025-11-29 | HIGH |
-| `telemetry.azr-metrics[.]com` | C2 — impersonates Azure | 2026-01-15 | MEDIUM |
-| `cdn-delivery.office365-update[.]net` | Phishing / C2 | 2026-02-03 | MEDIUM |
+| `update-svc.microsft-cdn[.]net` | 
+| `telemetry.azr-metrics[.]com` | 
+| `cdn-delivery.office365-update[.]net` |
 
 ### File Hashes (SHA-256)
 
-| Hash | Malware Family | Description | Confidence |
+| Hash | 
 |---|---|---|---|
-| `3a7f2c9b1d5e8f4a...` | CROSSWALK | Primary backdoor loader | HIGH |
-| `9c1d4e7b2f8a3c6e...` | DUSTPAN | In-memory dropper | HIGH |
-| `5c8d1e3f9b2a7c4e...` | MESSAGETAP | SMS interception tool | MEDIUM |
-
-### YARA Rules
-
-Detection rules available in [`/yara/`](./yara/) directory. Rules cover:
-- CROSSWALK backdoor strings and PE characteristics
-- DUSTPAN in-memory loader behaviour patterns
-- APT-41 C2 communication protocol fingerprints
+| `3a7f2c9b1d5e8f4a...` |
+| `9c1d4e7b2f8a3c6e...` | 
+| `5c8d1e3f9b2a7c4e...` | 
 
 ---
 
@@ -244,28 +236,15 @@ Detection rules available in [`/yara/`](./yara/) directory. Rules cover:
 
 APT-41 maintains one of the largest and most diverse custom malware portfolios of any tracked threat actor. Key tools include:
 
-| Tool | Type | Description |
+| Tool | Type |
 |---|---|---|
-| **CROSSWALK** | Backdoor | Primary C2 implant; modular, supports plugin loading |
-| **DUSTPAN** | Dropper | In-memory only; loads CROSSWALK without on-disk artifacts |
-| **MESSAGETAP** | Intercept tool | Deployed on telecom SMS gateways to intercept messages |
-| **SPECULOOS** | Backdoor | Linux-targeting; deployed against BSD systems |
-| **HIGHNOON** | Backdoor | Dropper + launcher combo targeting software vendors |
-| **DEADEYE** | Dropper | Used in supply chain operations |
-| **LOWKEY** | Passive backdoor | Listen-only; activated by specific network packet trigger |
-
----
-
-## Infrastructure Patterns
-
-APT-41 infrastructure analysis reveals consistent patterns across campaigns:
-
-- **VPS providers used:** Choopa/Vultr, QuadraNet, Leaseweb — often paid with cryptocurrency
-- **Domain registration:** Namecheap, Tucows — short WHOIS-privacy registrations
-- **IP clustering:** Infrastructure concentrated in Hong Kong, Singapore, and Netherlands ASNs
-- **TLS certificates:** Often self-signed or from Let's Encrypt with short 90-day validity
-- **C2 protocol:** HTTPS with domain fronting via legitimate cloud CDNs to blend with normal traffic
-- **Infrastructure rotation:** C2 nodes rotated every 7–21 days after confirmed use
+| **CROSSWALK** | Backdoor | 
+| **DUSTPAN** | Dropper | 
+| **MESSAGETAP** | Intercept tool | 
+| **SPECULOOS** | Backdoor |
+| **HIGHNOON** | Backdoor | 
+| **DEADEYE** | Dropper | 
+| **LOWKEY** | Passive backdoor | 
 
 ---
 
