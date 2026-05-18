@@ -69,7 +69,7 @@ This report synthesises open-source intelligence, incident response findings, an
 
 ---
 
-## Targeted Sectors & Regions
+## Targeted Sectors & Countries
 
 ### Sectors (confirmed targeting)
 
@@ -83,11 +83,11 @@ This report synthesises open-source intelligence, incident response findings, an
 | Government / Education | Espionage | Policy research, academic IP |
 | Financial services | Financial | Wire fraud, data theft |
 
-### Regions
+### Target Countries
 
-**Primary:** United States, UK, Australia, India, Japan, South Korea, Taiwan
+ United States, UK, Australia, India, Japan, South Korea, Taiwan
 
-**Secondary:** France, Canada, Germany, Switzerland, Singapore, Malaysia
+ France, Canada, Germany, Switzerland, Singapore, Malaysia
 
 ---
 
