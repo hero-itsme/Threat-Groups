@@ -25,6 +25,25 @@ f8d46895e738254238473d650d99bdc92c34ee44
 1042dfce8b4ff717596502d1cf8ee355
 4bc32032e358e348c212b716fd6141c7eaab15ab
 7cae7510f67d0725d844cc528805780b
+9fb933db1e3334c5e2c220c702294033
+64e76afdf43a6883461ae7dc9685015469b32e86
+b172e364bb320545b12826eeb77ee7e3ab56a4e5
+9c2d9d65827cdb9fc44126de1b17af07df4c1edd
+cd368e4956a5ebc6a31921265aa14c5a617f6cd052b46ae56e27614fd618c90d
+6f6b51e6c88e5252a2a117ca1cfb57934930166b
+09aada6270bd742a1ec628dc48d3b77f
+409706f38a747480065bf7caeee1765d
+fab426f085460cefd4a65b8a4396c05bf582cb20
+45e862964ef4efdea181f3927d20e96d
+9dbf67fd22957a6066d08cb366e7c0c9
+c77064e02b03894fc23e5e80215c1b9d
+d86e7809c92fb02d67af0be383de7216
+0a4ce3dd025745cf701a48d6077fc3f7e0677fc3
+39727e755b2806fc2ed5204dae4572a14b2d43d1
+4690a60aa5e6e323ad04993bf0076e9c78e7413c
+180efca9b5560e02f957f49f0b272339561483232adf0714021d6b32b737e707
+30b64628aae642380147c7671ea8f864b13c2d2affaaea34c4c9512c8a779225
+1015fa861318acbbfd405e54620aa5e3
 17366d4676f5badc3e9dbb05392b459a58b757d536169a076a9acb519cc1f382
 5eb94c62e75a8a11b1220f3f716f90bee69010ce4ad61c463be6e66dcaf29379
 8d3216c2fdbec7fc7a9af4e2d142e021d37037a187739d5aab2fa0351e8f4ec7
@@ -52,6 +71,25 @@ b6d2f4d9edd7b08c9841cca69c5cb6b312fa9ad1c19a447a26e915e1fd736e09
 
 --- 2. DOMAINS ---
 javaupdate.biguserup.workers.dev
+wlbsctrl.ax
+freak.pictures
+bafangqudao.com
+bot.jjevil.com
+toa.mygametoa.com
+nss.aresgame.info
+naotengml.xyz
+update.fengzigame.net
+extrsports.ru
+toya.co.kr
+cloud.amd-support.com
+kp.css2.com
+applevswin.com
+ftp.appaffect.com
+tob.mygametob.com
+channel-w.in
+ftp.ssrsec.com
+ui.threatstream.com
+wsus.kasperskyantivirus.net
 mute-pond-371d.zalocdn.workers.dev
 vietsovspeedtest.com
 ns.time12.cf
@@ -99,6 +137,25 @@ yang.0pendns.org
 
 --- 3. COMMAND & CONTROL (C2) IP ADDRESSES ---
 45.142.212.47
+104.88.34.55
+91.208.184.78
+45.144.31.55
+149.28.71.70
+45.144.31.31
+194.156.98.12
+5.183.103.122
+5.188.108.22
+91.235.128.197
+185.118.166.205
+194.61.233.56
+103.238.225.37
+154.204.58.135
+185.161.208.28
+45.84.1.181
+86.107.197.182
+45.128.132.6
+185.161.208.135
+78.128.112.137
 47.108.173.88
 185.118.167.40
 45.153.231.32
@@ -328,7 +385,25 @@ vaniadower5641c@gmail.com
 angelatyrrell844@gmail.com
 bhssasqza54251@gmail.com
 hostay88@gmail.com
-
+znetdevil@msn.com
+lauren19111@hotmail.com
+wljsdd@gmail.com
+lhm_cn@msn.com
+myjobs.kr.hr@gmail.com
+liveupdate@outlook.com
+ikoumoutzelis@gmail.com
+paulmckee518@gmail.com
+nodarie89@yahoo.com
+niying322@gmail.com
+artomikkola@outlook.com
+code.sec01@gmail.com
+ualmansife523f@gmail.com
+tw.slax@gmail.com
+jacktake@outlook.com
+carlietoole56@gmail.com
+stevenwhipple48@gmail.com
+ashiksaha73@gmail.com
+info@group-ib.ru
 
 
 
