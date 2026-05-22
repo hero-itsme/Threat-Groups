@@ -186,4 +186,3 @@ To build a comprehensive, open-source repository of threat actor intelligence th
 
 ---
 
-**Maintained by the Cyber Threat Intelligence Community**
