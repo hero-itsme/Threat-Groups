@@ -1,140 +1,544 @@
-# FIN7 Threat Intelligence Research
+# FIN7 (G0046) — Cyber Threat Intelligence Analysis
 
-![TLP](https://img.shields.io/badge/TLP-CLEAR-green)
-![Threat Intelligence](https://img.shields.io/badge/Focus-Threat%20Intelligence-blue)
-![MITRE ATT\&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-Mapped-red)
+**Report ID:** CTI-2026-09-23-APT
+**Date:** 23 September 2026
+**Priority:** High
+**TLP:** CLEAR
+**Source & Information Reliability:** A-1
 
-## Overview
+---
 
-This repository contains a Cyber Threat Intelligence (CTI) research project focused on **FIN7 (G0046)**, a financially motivated cybercriminal group tracked by MITRE ATT&CK.
+## 1. Executive Summary
 
-The research examines FIN7's evolution from payment-card theft toward broader **enterprise intrusion, data theft, initial-access operations, ransomware and extortion activity**.
+**FIN7**, tracked by MITRE ATT&CK as **G0046**, is a financially motivated cybercriminal group active since at least 2013.
 
-The analysis combines threat-actor profiling, Cyber Kill Chain analysis, MITRE ATT&CK mapping, IOC analysis, malware/tooling research, vulnerability intelligence, defensive priorities, and identified intelligence gaps.
+Known aliases include:
 
-## Research Objectives
+* Carbon Spider
+* GOLD NIAGARA
+* ELBRUS
+* ITG14
+* Sangria Tempest
 
-* Profile FIN7 and its known aliases
-* Analyze FIN7's targeting and victimology
-* Map documented activity across the Cyber Kill Chain
-* Map FIN7 behaviors to MITRE ATT&CK
-* Identify relevant IOCs and malware/tooling
-* Analyze vulnerabilities associated with documented activity
-* Derive defensive priorities for SOC and threat-hunting teams
-* Identify intelligence gaps requiring further collection
+FIN7 has historically been associated with the theft of payment-card data, particularly from retail, restaurant and hospitality organizations.
 
-## Key Findings
-
-FIN7 has historically been associated with payment-card theft, particularly against retail, restaurant and hospitality organizations.
-
-The research documents a broader operational scope involving:
+Its documented activity has expanded toward:
 
 * Enterprise intrusion
+* Data theft
 * Initial-access operations
-* Credential theft
-* Data collection and exfiltration
 * Custom malware and loaders
 * Ransomware-related activity
 * Financial extortion
 
-FIN7's documented tooling includes **CARBANAK, BIRDWATCH, POWERPLANT, LOADOUT, GRIFFON, POWERTRASH and DICELOADER**.
+The research indicates that FIN7 has adapted its tooling and operational procedures over time. Documented malware and tooling includes **POWERPLANT, BIRDWATCH, LOADOUT, GRIFFON, POWERTRASH, CARBANAK and DICELOADER**.
 
-## MITRE ATT&CK Coverage
+Historical malware signatures and static indicators alone may therefore provide limited coverage against changing FIN7 operations.
 
-The research maps FIN7 activity across multiple ATT&CK tactics, including:
+---
 
-| Tactic               | Example Techniques                                           |
-| -------------------- | ------------------------------------------------------------ |
-| Reconnaissance       | T1591, T1591.004                                             |
-| Resource Development | T1583.001, T1584.001, T1585.002                              |
-| Initial Access       | T1566.001, T1566.002, T1190, T1189, T1199, T1195.002         |
-| Execution            | T1059.001, T1059.003, T1059.005, T1059.007, T1204.002, T1047 |
-| Persistence          | T1053.005, T1547.001, T1543.003                              |
-| Privilege Escalation | T1068, T1548                                                 |
-| Defense Evasion      | T1027, T1036, T1070.004, T1562.001                           |
-| Credential Access    | T1003, T1558.003, T1078                                      |
-| Discovery            | T1057, T1087.002, T1069.002, T1049, T1016, T1033             |
-| Lateral Movement     | T1021.001, T1021.004, T1021.005, T1078                       |
-| Command & Control    | T1071.001, T1071.004, T1105, T1090, T1572, T1102             |
-| Collection           | T1005, T1113, T1123                                          |
-| Exfiltration         | T1567.002, T1041                                             |
-| Impact               | T1486, T1490, T1657                                          |
+# 2. Threat Actor Profile
 
-## Vulnerability Intelligence
+| Attribute              | Details                                                                                                                          |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Threat Actor           | FIN7                                                                                                                             |
+| MITRE ATT&CK ID        | G0046                                                                                                                            |
+| Motivation             | Cybercrime / Financial gain                                                                                                      |
+| Activity               | Enterprise intrusion, data theft, ransomware & extortion                                                                         |
+| Aliases                | Carbon Spider, GOLD NIAGARA, ELBRUS, ITG14, Sangria Tempest                                                                      |
+| Historical Focus       | Payment-card theft                                                                                                               |
+| Geographic Victimology | North America and Europe prominently represented                                                                                 |
+| Sectors                | Retail, hospitality, financial services, software, technology, healthcare, transportation, utilities, pharmaceuticals and others |
 
-The report identifies two vulnerabilities associated with documented FIN7 activity:
+---
+
+# 3. Intelligence Sources
+
+The report uses publicly available threat-intelligence research from:
+
+* MITRE ATT&CK
+* Blackpoint Cyber / Adversary Pursuit Group
+* Google Cloud / Mandiant
+* PRODAFT
+
+The research is primarily based on OSINT and publicly documented threat research.
+
+---
+
+# 4. Cyber Kill Chain Analysis
+
+## 4.1 Reconnaissance
+
+FIN7 has conducted victim research and selection.
+
+Documented activity includes gathering information about targeted organizations, employees and IT personnel with elevated privileges.
+
+**MITRE ATT&CK:**
+
+* T1591 — Gather Victim Organization Information
+* T1591.004 — Gather Victim Organization Information: Identify Roles
+
+---
+
+## 4.2 Weaponization
+
+FIN7 has developed or obtained malware and supporting tooling.
+
+Documented capabilities include:
+
+* CARBANAK
+* BIRDWATCH
+* POWERPLANT
+* DICELOADER
+* STONEBOAT
+* BOOSTWRITE
+* PowerShell tooling
+* Cobalt Strike
+
+FIN7 has also been documented using trojanized legitimate software and cloud infrastructure for malicious payload delivery.
+
+---
+
+## 4.3 Delivery
+
+Documented delivery methods include:
+
+* Spearphishing attachments
+* Malicious links
+* Trojanized software
+* Compromised websites
+* Supply-chain compromise
+* Malicious USB devices
+* Compromised email/marketing platforms
+
+---
+
+## 4.4 Exploitation
+
+FIN7 has exploited:
+
+* Public-facing applications
+* Remote services
+* Vulnerable enterprise applications
+* Malicious documents
+* PowerShell
+* Windows Management Instrumentation
+
+Documented vulnerabilities include:
+
+* **CVE-2021-31207**
+* **CVE-2020-1472 (ZeroLogon)**
+
+---
+
+## 4.5 Installation & Persistence
+
+Documented persistence mechanisms include:
+
+* Scheduled Tasks
+* Registry Run/RunOnce keys
+* Windows services
+* Application shimming
+* OpenSSH
+* Masquerading
+* Hidden files and directories
+
+One documented scheduled task is:
+
+```text
+AdobeFlashSync
+```
+
+---
+
+## 4.6 Command & Control
+
+FIN7 has used:
+
+* HTTP/HTTPS
+* DNS
+* Legitimate web services
+* Remote-access infrastructure
+* Non-standard ports
+* OpenSSH tunneling
+
+Documented techniques include:
+
+* T1071.001 — Web Protocols
+* T1071.004 — DNS
+* T1105 — Ingress Tool Transfer
+* T1090 — Proxy
+* T1572 — Protocol Tunneling
+* T1102 — Web Service
+
+---
+
+## 4.7 Actions on Objectives
+
+Documented objectives include:
+
+* Payment-card theft
+* Credential theft
+* Data collection
+* Data exfiltration
+* Financial theft
+* Ransomware
+* Extortion
+
+Collection and exfiltration behaviors include file collection, screen capture, audio capture and transfer of data through cloud-storage services such as MEGA.
+
+---
+
+# 5. Indicators of Compromise
+
+## 5.1 Endpoint Artifacts
+
+Examples documented in the research include:
+
+```text
+3CF9.ps1
+WsTaskLoad.exe
+AdobeFlashSync
+net group "Domain Admins" /domain
+tasklist /v
+cmd.exe /C quser
+sc start sshd
+certutil -decode hex
+```
+
+Additional artifacts include:
+
+```text
+TCP 59999
+TCP 9898
+C:\ProgramData\ssh
+qawsed1q2w3e
+```
+
+---
+
+## 5.2 Network Indicators
+
+Documented domains include:
+
+```text
+advanced-ip-sccanner[.]com
+softowii[.]com
+mozillaupdate[.]com
+milkmovemoney[.]com
+tableofcolorize[.]com
+moviedvdpower[.]com
+landscapesboxdesign9[.]com
+hawrickday[.]com
+colormiagi[.]com
+```
+
+Documented IP addresses include:
+
+```text
+45.11.180.82
+138.124.180.226
+185.172.129.144
+37.252.4.131
+45.133.216.25
+45.140.146.184
+184.95.57.98
+45.147.228.239
+206.166.251.200
+94.158.244.91
+94.158.244.18
+```
+
+The report also documents historical TOR infrastructure.
+
+> **IOC handling note:** These indicators are historical/publicly reported intelligence and should be validated before operational use.
+
+---
+
+# 6. Malware & Tooling
+
+The report identifies the following malware and tools:
+
+| Malware / Tool           |
+| ------------------------ |
+| CARBANAK                 |
+| BOOSTWRITE               |
+| Cobalt Strike            |
+| AdFind                   |
+| PowerSploit / POWERTRASH |
+| Lizar                    |
+| JSS Loader               |
+| Harpy                    |
+| DICELOADER               |
+| STONEBOAT                |
+| Atera                    |
+
+---
+
+# 7. Vulnerability Intelligence
 
 | CVE                       | CVSS | Patch Available |
 | ------------------------- | ---: | --------------- |
 | CVE-2021-31207            |  9.8 | Yes             |
 | CVE-2020-1472 (ZeroLogon) | 10.0 | Yes             |
 
-## IOC & Malware Analysis
+The report records these vulnerabilities in the context of documented FIN7 exploitation activity.
 
-The research includes:
+---
 
-* Endpoint artifacts
-* PowerShell artifacts
-* Suspicious commands
-* Scheduled-task artifacts
-* Network domains
+# 8. MITRE ATT&CK Mapping
+
+## Reconnaissance
+
+| Technique | Name                                   |
+| --------- | -------------------------------------- |
+| T1591     | Gather Victim Organization Information |
+| T1591.004 | Identify Roles                         |
+
+## Resource Development
+
+| Technique | Name                               |
+| --------- | ---------------------------------- |
+| T1583.001 | Acquire Infrastructure: Domains    |
+| T1584.001 | Compromise Infrastructure: Domains |
+| T1585.002 | Establish Accounts: Email Accounts |
+
+## Initial Access
+
+| Technique | Name                                           |
+| --------- | ---------------------------------------------- |
+| T1566.001 | Phishing: Spearphishing Attachment             |
+| T1566.002 | Phishing: Spearphishing Link                   |
+| T1190     | Exploit Public-Facing Application              |
+| T1189     | Drive-by Compromise                            |
+| T1199     | Trusted Relationship                           |
+| T1195.002 | Supply Chain Compromise: Software Supply Chain |
+
+## Execution
+
+| Technique | Name                               |
+| --------- | ---------------------------------- |
+| T1059.001 | PowerShell                         |
+| T1059.003 | Windows Command Shell              |
+| T1059.005 | Visual Basic                       |
+| T1059.007 | JavaScript/JScript                 |
+| T1204.002 | User Execution: Malicious File     |
+| T1047     | Windows Management Instrumentation |
+
+## Persistence
+
+| Technique | Name                               |
+| --------- | ---------------------------------- |
+| T1053.005 | Scheduled Task/Job                 |
+| T1547.001 | Registry Run Keys / Startup Folder |
+| T1543.003 | Windows Service                    |
+| T1546.001 | Change Default File Association    |
+| T1546.013 | PowerShell Profile                 |
+
+## Privilege Escalation
+
+| Technique | Name                                  |
+| --------- | ------------------------------------- |
+| T1068     | Exploitation for Privilege Escalation |
+| T1548     | Abuse Elevation Control Mechanism     |
+
+## Defense Evasion
+
+| Technique | Name                                         |
+| --------- | -------------------------------------------- |
+| T1027     | Obfuscated/Compressed Files and Information  |
+| T1036     | Masquerading                                 |
+| T1070.004 | File and Directory Discovery / File Deletion |
+| T1562.001 | Impair Defenses: Disable or Modify Tools     |
+
+## Credential Access
+
+| Technique | Name                  |
+| --------- | --------------------- |
+| T1003     | OS Credential Dumping |
+| T1558.003 | Kerberoasting         |
+| T1078     | Valid Accounts        |
+
+## Discovery
+
+| Technique | Name                                   |
+| --------- | -------------------------------------- |
+| T1057     | Process Discovery                      |
+| T1087.002 | Domain Account Discovery               |
+| T1069.002 | Domain Groups Discovery                |
+| T1049     | System Network Connections Discovery   |
+| T1016     | System Network Configuration Discovery |
+| T1033     | System Owner/User Discovery            |
+
+## Lateral Movement
+
+| Technique | Name                 |
+| --------- | -------------------- |
+| T1021.001 | Remote Services: RDP |
+| T1021.004 | Remote Services: SSH |
+| T1021.005 | Remote Services: VNC |
+| T1078     | Valid Accounts       |
+
+## Command & Control
+
+| Technique | Name                  |
+| --------- | --------------------- |
+| T1071.001 | Web Protocols         |
+| T1071.004 | DNS                   |
+| T1105     | Ingress Tool Transfer |
+| T1090     | Proxy                 |
+| T1572     | Protocol Tunneling    |
+| T1102     | Web Service           |
+
+## Collection
+
+| Technique | Name                   |
+| --------- | ---------------------- |
+| T1005     | Data from Local System |
+| T1113     | Screen Capture         |
+| T1123     | Audio Capture          |
+
+## Exfiltration
+
+| Technique | Name                                                         |
+| --------- | ------------------------------------------------------------ |
+| T1567.002 | Exfiltration Over Web Service: Exfiltration to Cloud Storage |
+| T1041     | Exfiltration Over C2 Channel                                 |
+
+## Impact
+
+| Technique | Name                      |
+| --------- | ------------------------- |
+| T1486     | Data Encrypted for Impact |
+| T1490     | Inhibit System Recovery   |
+| T1657     | Financial Theft           |
+
+---
+
+# 9. Defensive Priorities
+
+Based on the documented attack lifecycle, defensive priorities include:
+
+### Reconnaissance
+
+Monitor external exposure of critical applications and privileged-user information.
+
+### Weaponization
+
+Monitor threat intelligence for new FIN7 malware, loaders, domains and infrastructure.
+
+### Delivery
+
+Strengthen:
+
+* Email filtering
+* Attachment analysis
+* URL reputation analysis
+* Removable-media controls
+
+### Exploitation
+
+Prioritize rapid patching of internet-facing applications and monitor exploitation attempts against critical enterprise infrastructure.
+
+### Persistence
+
+Monitor for:
+
+* New scheduled tasks
+* Suspicious services
+* Registry Run keys
+* SSH services
+* Suspicious persistence mechanisms
+
+### Command & Control
+
+Monitor:
+
+* Anomalous DNS
+* Unusual outbound connections
+* Remote-management tools
+* Non-standard ports
+* Suspicious tunneling
+
+### Actions on Objectives
+
+Detect:
+
+* Abnormal data staging
+* Cloud uploads
+* Privileged-account abuse
+* Credential theft
+* Ransomware behavior
+
+---
+
+# 10. Intelligence Gaps
+
+## Current FIN7 Infrastructure
+
+There is limited visibility into currently active:
+
 * IP addresses
-* TOR infrastructure
-* Malware and tooling
+* Domains
+* URLs
+* C2 servers
+* Hosting infrastructure
 
-Examples of documented tooling include:
+Many publicly documented indicators are historical and may no longer be operational.
 
-* CARBANAK
-* BOOSTWRITE
-* Cobalt Strike
-* AdFind
-* PowerSploit / POWERTRASH
-* DICELOADER
-* STONEBOAT
-* Atera
+## Current Targeting
 
-> **Note:** Historical IOCs should be independently validated before being used for blocking or detection because infrastructure may become inactive or be reassigned.
+More recent victim information is required to determine FIN7's current sector and geographic priorities.
 
-## Defensive Priorities
+## New TTPs & Vulnerabilities
 
-The analysis identifies several defensive focus areas:
+Additional evidence is required regarding:
 
-* Monitor exposure of critical internet-facing applications
-* Monitor privileged-user information
-* Track emerging FIN7 malware, loaders and infrastructure
-* Strengthen phishing and URL analysis
-* Rapidly patch internet-facing applications
-* Detect suspicious scheduled tasks and services
-* Monitor Registry Run keys and SSH activity
-* Detect anomalous DNS and outbound connections
-* Monitor remote-management tools and non-standard ports
-* Detect abnormal data staging and cloud uploads
-* Monitor privileged-account activity and credential theft
-* Detect ransomware-related behaviors
+* Newly exploited CVEs
+* Emerging TTPs
+* Technologies currently targeted by FIN7
 
-## Intelligence Gaps
+## Attribution
 
-The research identifies four major intelligence gaps:
+FIN7 has been associated with multiple criminal groups, ransomware operations, malware families and activity clusters.
 
-1. **Current infrastructure** — limited visibility into currently active FIN7 IPs, domains, URLs and C2 infrastructure.
-2. **Current targeting** — additional recent victim information is required to determine current sector and geographic priorities.
-3. **New TTPs and vulnerabilities** — additional evidence is required regarding newly exploited vulnerabilities and evolving techniques.
-4. **Attribution** — further evidence is required to distinguish confirmed FIN7 activity from suspected FIN7-associated or affiliate activity.
+Further evidence is required to distinguish confirmed FIN7 activity from suspected or low-confidence FIN7-associated activity.
 
+---
 
-## Sources
+# 11. Key CTI Takeaways
 
-The analysis is based primarily on publicly available threat-intelligence research from:
+### 1. Threat actors evolve
 
-* MITRE ATT&CK
-* Google Cloud / Mandiant
-* Blackpoint Cyber / Adversary Pursuit Group
-* PRODAFT
+FIN7 demonstrates how a financially motivated actor can expand beyond its historical focus and adopt broader enterprise intrusion and extortion operations.
 
-See `FIN7.md` for the detailed analysis and references.
+### 2. Static IOC-based detection has limitations
+
+Historical infrastructure can become inactive or change. Behavioral and TTP-based detection can therefore complement IOC-based detection.
+
+### 3. ATT&CK mapping improves detection context
+
+Mapping observed behavior to MITRE ATT&CK helps translate threat reporting into techniques that SOC and threat-hunting teams can investigate.
+
+### 4. Intelligence gaps matter
+
+A CTI assessment should identify not only what is known, but also what remains unknown and requires additional collection.
+
+---
+
+# 12. References
+
+1. Blackpoint Cyber / Adversary Pursuit Group — FIN7 Threat Profile
+2. Google Cloud / Mandiant — Evolution of FIN7
+3. MITRE ATT&CK — FIN7 (G0046)
+4. PRODAFT — FIN7-related infrastructure research
+
+---
 
 ## Disclaimer
 
-This repository is intended for **defensive cybersecurity research and threat-intelligence analysis**.
+This document is intended for **defensive cybersecurity research and threat-intelligence purposes**.
 
-The information represents publicly documented threat activity and should be independently validated before being used for operational detection, blocking or attribution.
+The IOCs, infrastructure and threat information presented in this research are based on publicly documented reporting and should be independently validated before operational use.
+
+**TLP:CLEAR**
